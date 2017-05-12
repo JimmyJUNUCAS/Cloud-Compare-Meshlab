@@ -20,6 +20,7 @@
 	double globalScale = pc->getGlobalScale();
 	//全局尺度
 	//Convert CC point cloud to RANSAC_SD type
+	
 	PointCloud cloud;
 	{
 			//default point & normal
@@ -56,3 +57,24 @@
 	//cloud scale (useful for setting several parameters
 	const float scale = cloud.getScale();
 	//得到云尺度
+
+	//init dialog with default values
+	ccRansacSDDlg rsdDlg(m_app->getMainWindow());
+	//Right Dialog
+	rsdDlg.epsilonDoubleSpinBox->setValue(.005f * scale);
+	//Left Dialog
+	rsdDlg.planeCheckBox->setChecked(s_primEnabled[0]);
+	s_supportPoints = rsdDlg.supportPointsSpinBox->value();
+	s_maxNormalDev_deg = rsdDlg.maxNormDevAngleSpinBox->value();
+	s_proba = rsdDlg.probaDoubleSpinBox->value();
+
+	plane->Parameters(cloud[count-1-j].pos,&param);
+
+
+
+MeshModel *mm = meshDoc()->mm();
+	VertexIterator vi = mm->cm.vert.begin();
+	for (;vi != mm->cm.vert.end(); vi++)
+	{
+		(*vi).P()[0];
+	}
