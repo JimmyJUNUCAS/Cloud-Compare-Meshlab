@@ -1,0 +1,25 @@
+#ifndef
+#define
+#endif
+
+目的：防止该头文件 被重复引用
+
+被重复引用：定义，头文件在同一个cpp文件中被include了多次，由于include嵌套造成。
+            a头文件，#include c.h; 
+			b头文件，#include a.h; #include c.h
+            此时就会造成c.h的重复引用
+
+后果：1 头文件重复引用增加了编译的工作量	
+      2 头文件重复引用引起错误		
+	  
+使用方法： #ifndef a.h  如果不存在a这个头文件
+           #define a.h  则包含a这个头文件
+		   #endif       否则不需要引入
+		   
+#include <math.h>   //引用标准库的头文件
+#include "header.h" //引用非标准库的头文件
+void function1(...);//全局函数声明
+class box{...}      //类结构声明
+
+sublime text3中字体查看：view->show console 
+输入 view.settings().get('font_face') 
