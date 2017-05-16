@@ -102,6 +102,47 @@ void QRanSacSDPlugin::initParameterSet(QAction *action, MeshDocument &md, RichPa
 // Move Vertex of a random quantity
 bool QRanSacSDPlugin::applyFilter(QAction *filter, MeshDocument &md, RichParameterSet & par, vcg::CallBackPos *cb)
 {
+	PointCloud cloud;
+	{
+		try
+		{
+			cloud.reserve(count);
+		}
+		catch(...)
+		{
+			m_app->dispToConsole("Not enough memory!",ccMainAppInterface::ERR_CONSOLE_MESSAGE);
+			return;
+		}
+		//default point & normal
+		Point Pt;
+		Pt.normal[0] = 0.0;
+		Pt.normal[1] = 0.0;
+		Pt.normal[2] = 0.0;
+		//MeshModel *mm = meshDoc()->mm();
+		MeshModel *mm = md.mm();
+		VertexIterator vi = mm->cm.vert.begin();
+		for (;vi != mm->cm.vert.end(); vi++)
+		{
+			Pt.pos[0] = static_cast<float>(*vi).P()[0];
+			Pt.pos[1] = static_cast<float>(*vi).P()[1];
+			Pt.pos[2] = static_cast<float>(*vi).P()[2];
+			cloud.push_back(Pt);
+		}
+		//manually set bounding box!
+		Vec3f cbbMin,cbbMax;
+		cbbMin[0] = static_cast<float>(bbMin.x);
+		cbbMin[1] = static_cast<float>(bbMin.y);
+		cbbMin[2] = static_cast<float>(bbMin.z);
+		cbbMax[0] = static_cast<float>(bbMax.x);
+		cbbMax[1] = static_cast<float>(bbMax.y);
+		cbbMax[2] = static_cast<float>(bbMax.z);
+		cloud.setBBox(cbbMin,cbbMax);
+	}
+
+	//cloud scale (useful for setting several parameters
+	const float scale = cloud.getScale();
+	//得到云尺度
+
 	//CMeshO &m = md.mm()->cm;
 	/*srand(time(NULL)); 
 	const float max_displacement =par.getAbsPerc("Displacement");

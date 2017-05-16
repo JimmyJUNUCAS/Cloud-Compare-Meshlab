@@ -1,0 +1,45 @@
+（1）在QT中使用多线程
+办法： QThread QtConcurrent QRunable
+使用QtConcurrent 和 QRunable 都会和全局线程池一起使用
+
+QtConcurrent::run()函数的使用方法：
+将待处理项放入一个函数中，把它传给run()函数。
+作用：令启动一个线程来执行一个函数
+使用方法：1 定义一个在另外开启的线程中执行的函数
+          2 有了在线程中执行的函数，再启动线程来运行这个函数
+		  3 线程得到了运行会发送消息给MainWindow，MainWindow重新实现bool MainWindow::event(QEvent*event)
+		  处理接收到的消息，并显示出来
+
+extern void aFuctionWithArguments(int arg1, double arg2, const QString &string);
+int integer = ...;
+double floatingPoint = ...;
+Qstring string = ...;
+
+QFuture<void> future = QtConcurrent::run(aFuctionWithArguments, integer, floatingPoint, string);
+第一个是函数指针，下面是参数。
+
+（2）explicit C++关键字 可以阻止不应该允许的经过 转换构造函数 进行的隐式转换的发生 
+声明为explicit的构造函数不能在隐式转换中使用。
+
+（3）在C++项目中引入.h .lib .cpp dll等不同类型方法
+3.1 .h的引入
+原因：引入.h才能使用类
+方法：1 在工程中引入.h文件
+        方法1 将头文件拷贝到工程目录下
+		方法2 在其他地方建立一个include目录，设置环境变量，指向该目录
+		属性管理器->C++ 常规  附加包含目录 添加：..\..\include目录
+      2 在文件中加入#include "XXX.h"
+
+如果只有.h文件：无法使用其中的方法。此时会发生LINK错误。LINK错误说明，编译已经完成，没有语法错误，在链接lib库的时候报错。
+
+3.2 .lib文件的引入
+方法： 属性管理器 属性 链接器 输入 附加依赖项 ..\..\lib\XXX.lib
+
+3.3 dll库的引入
+把dll文件拷贝到工程目录下，同时需要将dll文件拷贝到Debug目录下
+
+3.4 cpp文件的引入
+一个项目中几个工程，有一些通用模块（定义为独立的.h .cpp），这些通用的模块可以放在公共目录下，大家从这个目录下引入
+
+方法： 配置项目属性 C++ 常规 附加包含目录 添加：..\common
+       同时在项目中引入.h .cpp文件

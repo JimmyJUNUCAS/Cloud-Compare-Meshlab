@@ -23,3 +23,57 @@ class box{...}      //类结构声明
 
 sublime text3中字体查看：view->show console 
 输入 view.settings().get('font_face') 
+
+string::size_type
+使用下标
+使用迭代器
+
+标准库类型string
+使用string必须包含string头文件，同时作为标准库的一部分必须用命名空间std
+#include <string>
+using namespace std;
+
+3.2.1 定义和初始化string对象
+构造函数，直接初始化，拷贝初始化
+3.2.2 string对象上的操作
+类定义函数；
+类对于运算符进行重载；
+
+ 1 string对象读写
+ 1.1 使用ＩＯ操作来读写string
+ 1.2 读取未知数量的string对象 while（cin << word）
+ 1.3 使用getline读取一整行 cin遇到空格；getline遇到换行
+     getline（cin,line）
+ 2 string 的empty和size操作
+   string line； line.size(); line.empty();
+   string::size_type 类型 无符号类型值，足够存放任何string对象的大小
+ 3 string的比较 （== ！= > <）
+ 4 string对象的赋值；
+ 5 string对象的相加；+ 串联； += ；
+   字面值与string对象相加；可以将字符串字面值',''\n''hello'等强制类型转换。之后完成字符串拼接工作。
+   过程中需要注意一个问题，每一个'+'两端应该至少有一个string对象。
+   字符串字面值并不是标准库类型string对象。
+3.2.3 处理string对象中的字符 遍历对象中的每一个字符，使用cctype头文件中定义的一组标准库函数处理
+ 1 使用基于范围的for语句。
+   string str('some string');
+   for(auto c : str)
+   	cout << c << endl;
+   通过编译器决定c的类型，
+ 2 使用范围for语句改变字符串中字符；
+   想改变string对象中字符的值，必须把循环变量定义成引用类型。
+   string str('some string');
+   for(auto &c : str)
+   	c =  toupper(c);
+   	cout << str << endl;
+ 3 只处理一部分字符；访问string对象中的单个字符有两种方式：1使用下标，2使用迭代器
+   3.1使用下标[]
+   下标运算符接受的输入参数是string::size_type类型的值，该参数访问字符的位置，返回该位置上字符的引用。
+   string s('some string');
+   if (!s.empty())
+   	s[0] = toupper(s[0]);
+   3.2使用下标执行迭代
+   for (decltype(s.size()) index = 0; index != s.size() && !isspace(s[index]);++index)
+   	s[index] = toupper(s[index]);
+   C++ 规定只有左侧为真才会检测右侧运算对象情况。
+   3.3使用下标执行随机访问
+   直接计算出下标，进行访问字符串。
