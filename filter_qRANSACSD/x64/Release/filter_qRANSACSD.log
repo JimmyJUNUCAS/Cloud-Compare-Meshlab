@@ -1,13 +1,65 @@
 ﻿  filter_qRANSACSD.cpp
 ..\..\..\..\vcglib\vcg/complex/algorithms/update/color.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\filter_qRANSACSD.h(29): warning C4100: “filter”: 未引用的形参
-filter_qRANSACSD.cpp(72): warning C4305: “参数”: 从“double”到“const float”截断
-filter_qRANSACSD.cpp(73): warning C4305: “参数”: 从“double”到“const float”截断
-filter_qRANSACSD.cpp(75): warning C4305: “参数”: 从“double”到“const float”截断
-filter_qRANSACSD.cpp(59): warning C4100: “md”: 未引用的形参
-filter_qRANSACSD.cpp(103): warning C4100: “cb”: 未引用的形参
-filter_qRANSACSD.cpp(103): warning C4100: “par”: 未引用的形参
-filter_qRANSACSD.cpp(103): warning C4100: “md”: 未引用的形参
-filter_qRANSACSD.cpp(103): warning C4100: “filter”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\PrimitiveShape.h(96): warning C4100: “suggestions”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\PrimitiveShape.h(95): warning C4100: “distThresh”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\PrimitiveShape.h(95): warning C4100: “end”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\PrimitiveShape.h(94): warning C4100: “begin”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\PrimitiveShape.h(93): warning C4100: “pc”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\PrimitiveShape.h(98): warning C4100: “epsilon”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\PrimitiveShape.h(98): warning C4100: “end”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\PrimitiveShape.h(98): warning C4100: “begin”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\PrimitiveShape.h(97): warning C4100: “pc”: 未引用的形参
+G:\meshlab\meshlab\src\meshlabplugins\filter_qRANSACSD\RANSACSOURCE\RansacShapeDetector.h(69): warning C4100: “numTries”: 未引用的形参
+G:\meshlab\meshlab\src\meshlabplugins\filter_qRANSACSD\RANSACSOURCE\MiscLib/Performance.h(3): warning C4005: “WIN32”: 宏重定义
+  G:\meshlab\meshlab\src\meshlabplugins\filter_qRANSACSD\RANSACSOURCE\MiscLib/Performance.h(3): note: 命令行参数: 参见前面的“WIN32”定义
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\LevMarFitting.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+G:\meshlab\meshlab\src\meshlabplugins\filter_qRANSACSD\RANSACSOURCE\PlanePrimitiveShape.h(130): warning C4100: “x”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\LowStretchSphereParametrization.h(23): warning C4100: “epsilon”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\LowStretchSphereParametrization.h(22): warning C4100: “bbox”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\SimpleTorusParametrization.h(28): warning C4100: “labels”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\SimpleTorusParametrization.h(27): warning C4100: “componentImg”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\SimpleTorusParametrization.h(26): warning C4100: “vextent”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\SimpleTorusParametrization.h(26): warning C4100: “uextent”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\SimpleTorusParametrization.h(26): warning C4100: “epsilon”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\SimpleTorusParametrization.h(25): warning C4100: “bbox”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\LowStretchTorusParametrization.h(24): warning C4100: “epsilon”: 未引用的形参
+g:\meshlab\meshlab\src\meshlabplugins\filter_qransacsd\ransacsource\LowStretchTorusParametrization.h(23): warning C4100: “bbox”: 未引用的形参
+filter_qRANSACSD.cpp(98): warning C4100: “md”: 未引用的形参
+filter_qRANSACSD.cpp(157): warning C4551: 缺少参数列表的函数调用
+filter_qRANSACSD.cpp(137): warning C4100: “cb”: 未引用的形参
+filter_qRANSACSD.cpp(137): warning C4100: “filter”: 未引用的形参
+G:\meshlab\meshlab\src\meshlabplugins\filter_qRANSACSD\RANSACSOURCE\MiscLib/AlignedAllocator.h(45): warning C4100: “p”: 未引用的形参
+  G:\meshlab\meshlab\src\meshlabplugins\filter_qRANSACSD\RANSACSOURCE\MiscLib/AlignedAllocator.h(45): note: 编译类 模板 成员函数“void MiscLib::AlignedAllocator<T,8>::destroy(Point *)”时
+          with
+          [
+              T=Point
+          ]
+  G:\meshlab\meshlab\src\meshlabplugins\filter_qRANSACSD\RANSACSOURCE\MiscLib/Vector.h(321): note: 参见对正在编译的函数 模板 实例化“void MiscLib::AlignedAllocator<T,8>::destroy(Point *)”的引用
+          with
+          [
+              T=Point
+          ]
+  G:\meshlab\meshlab\src\meshlabplugins\filter_qRANSACSD\RANSACSOURCE\MiscLib/Vector.h(21): note: 参见对正在编译的类 模板 实例化“MiscLib::AlignedAllocator<T,8>”的引用
+          with
+          [
+              T=Point
+          ]
+  G:\meshlab\meshlab\src\meshlabplugins\filter_qRANSACSD\RANSACSOURCE\PointCloud.h(62): note: 参见对正在编译的类 模板 实例化“MiscLib::Vector<Point,MiscLib::AlignedAllocator<T,8>>”的引用
+          with
+          [
+              T=Point
+          ]
+G:\meshlab\meshlab\src\meshlabplugins\filter_qRANSACSD\RANSACSOURCE\MiscLib/AlignedAllocator.h(40): warning C4100: “hint”: 未引用的形参
+  G:\meshlab\meshlab\src\meshlabplugins\filter_qRANSACSD\RANSACSOURCE\MiscLib/AlignedAllocator.h(41): note: 编译类 模板 成员函数“Point *MiscLib::AlignedAllocator<T,8>::allocate(MiscLib::AlignedAllocator<T,8>::std::size_type,std::allocator<void>::const_pointer)”时
+          with
+          [
+              T=Point
+          ]
+  G:\meshlab\meshlab\src\meshlabplugins\filter_qRANSACSD\RANSACSOURCE\MiscLib/Vector.h(315): note: 参见对正在编译的函数 模板 实例化“Point *MiscLib::AlignedAllocator<T,8>::allocate(MiscLib::AlignedAllocator<T,8>::std::size_type,std::allocator<void>::const_pointer)”的引用
+          with
+          [
+              T=Point
+          ]
     正在创建库 ..\..\distrib\plugins\\filter_qRANSACSD.lib 和对象 ..\..\distrib\plugins\\filter_qRANSACSD.exp
   filter_qRANSACSD.vcxproj -> G:\meshlab\meshlab\src\meshlabplugins\filter_qRANSACSD\..\..\distrib\plugins\filter_qRANSACSD.dll

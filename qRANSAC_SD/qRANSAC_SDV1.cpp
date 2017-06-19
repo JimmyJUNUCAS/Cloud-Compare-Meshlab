@@ -303,10 +303,12 @@ void qRansacSD::doAction()
 	MiscLib::Vector< DetectedShape > shapes; // stores the detected shapes
 
 	// run detection
-	// returns number of unassigned points
-	// the array shapes is filled with pointers to the detected shapes
+	// returns number of unassigned points 返回没有被使用的点
+	// the array shapes is filled with pointers to the detected shapes 数组点由定位到的形状
 	// the second element per shapes gives the number of points assigned to that primitive (the support)
+	// 每个形状的第二个元素给出了属于那个基元的点的数量
 	// the points belonging to the first shape (shapes[0]) have been sorted to the end of pc,
+	// 属于第一个形状的点被排序到pc的后端
 	// i.e. into the range [ pc.size() - shapes[0].second, pc.size() )
 	// the points of shape i are found in the range
 	// [ pc.size() - \sum_{j=0..i} shapes[j].second, pc.size() - \sum_{j=0..i-1} shapes[j].second )
@@ -326,11 +328,11 @@ void qRansacSD::doAction()
 
 		while (!future.isFinished())
 		{
-#if defined(CC_WINDOWS)
+ #if defined(CC_WINDOWS)
 			::Sleep(500);
-#else
+ #else
 			usleep(500 * 1000);
-#endif
+ #endif
 			pDlg.setValue(pDlg.value()+1);
 			QApplication::processEvents();
 		}
@@ -345,7 +347,7 @@ void qRansacSD::doAction()
 	//	remaining = detector.Detect(cloud, 0, cloud.size(), &shapes);
 	//}
 
-#if 0 //def _DEBUG
+ #if 0 //def _DEBUG
 	FILE* fp = fopen("RANS_SD_trace.txt","wt");
 
 	fprintf(fp,"[Options]\n");
@@ -374,7 +376,7 @@ void qRansacSD::doAction()
 		}
 	}
 	fclose(fp);
-#endif
+ #endif
 
 	if (remaining == count)
 	{
