@@ -13,3 +13,9 @@ The project about the plug-in transform of Cloud Compare and Meshlab
         Meshlab框架中插件模板，代表性插件学习示例。
         
  尺寸检测原理参考论文：http://pan.baidu.com/s/1jIQf7BC
+ 
+ 尺寸检测原理：
+ 
+ meshlab 插件模板分析
+ 
+ 尺寸检测代码分析
