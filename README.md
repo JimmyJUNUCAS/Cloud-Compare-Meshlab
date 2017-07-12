@@ -29,4 +29,4 @@ The project about the plug-in transform of Cloud Compare and Meshlab
 
  ![Sphere](https://github.com/JimmyJUNUCAS/Cloud-Compare-Meshlab/blob/master/pic/Sphere.png)
  
- [![Cylinder]](https://github.com/JimmyJUNUCAS/Cloud-Compare-Meshlab/blob/master/pic/Cylinder.png)
+ ![Cylinder](https://github.com/JimmyJUNUCAS/Cloud-Compare-Meshlab/blob/master/pic/Cylinder.png)"Cylinder"
