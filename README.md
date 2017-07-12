@@ -26,4 +26,4 @@ The project about the plug-in transform of Cloud Compare and Meshlab
 
 2017/7/12
 完成尺度检测模块，效果图如下：
-1 [Sphere](https://github.com/JimmyJUNUCAS/Cloud-Compare-Meshlab/raw/master/Sphere.png)
+1 1[Sphere](https://github.com/JimmyJUNUCAS/Cloud-Compare-Meshlab/raw/master/Sphere.png)
